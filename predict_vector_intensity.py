@@ -22,6 +22,7 @@ transform_train = transforms.Compose([
 ])
 class predict():
     def __init__(self):
+        # Its epicenter pixel cordinates in your image.
         self.cord=(3600,5760)
         return
         
@@ -72,8 +73,6 @@ class predict():
                 for cy in range(0,H,16):
                     small=image[cx:cx+_size,cy:cy+_size]
                     small=small/self.maxheight
-            
-
                     input_=self.default_loader(small)
                     intensity=self.intensity[cx,cy]
                     xx=(cx-self.cord[0])
@@ -140,10 +139,9 @@ class predict():
                 
 
             
-         
-            # image[x:x+_size,y:y+_size]+=np.ones((_size,_size),dtype=float)
 
         plt.imshow(result),plt.show()
+        # plt.imsave('result.png',result)
 
             # patch=image
 
@@ -152,7 +150,7 @@ def main():
     dempath='/home/winshare/paper/DEMUPDATE/data/LargeUpdate.tif'
     intensity='/home/winshare/paper/DEMUPDATE/intensityupdate.tif'
     predict_=predict()
-    predict_.netload(model_path='/home/winshare/paper/DemClassfier/checkpoint/ckpt2.pth')
+    predict_.netload(model_path='./checkpoint/ckpt2.pth')
     predict_.setintensity(intensity)
     predict_.despimage(dempath)
     image=torch.randn((1,3,32,32))

@@ -29,12 +29,6 @@ def read_flags():
 
 
 
-
-
-
-
-
-
 def cut_patches(index, image_path, label_path, rate, mode, csv_,directory='.'):
 
 
@@ -91,70 +85,7 @@ def main():
 
     flags = read_flags()
 
-    # 此处需要修改文件位置，将训练数据路径放入train变量中，标签放入train_label变量中，注意是有顺序的对应关系
-
-    # train_label_path_xs = "../广深-2018/外包标注"
-    # train_label_xs = glob.glob(os.path.join(train_label_path_xs, "*.tif"))
-    #
-    # train_path_xs = "../广深-2018/外包训练数据"
-    # train_xs = [os.path.join(train_path_xs, os.path.basename(i)) for i in train_label_xs]
-
-    # train_label_path_2018 = "../广深-2018/标注"
-    # train_label_2018 = glob.glob(os.path.join(train_label_path_2018, "*.tif"))
-    #
-    # train_path_2018 = "../广深-2018/多边形区域/Level18"
-    # train_2018 = [os.path.join(train_path_2018, os.path.basename(i)[6:]) for i in train_label_2018]
-
-
-    # train_label_path_haidian = "../海淀影像/label"
-    # train_label_haidian = glob.glob(os.path.join(train_label_path_haidian, "*.tif"))
-    #
-    # train_path_haidian = "../海淀影像/data"
-    # train_haidian = [os.path.join(train_path_haidian, os.path.basename(i)) for i in train_label_haidian]
-    #
-###################################################################################################################
-        # train_label_path_2013 = "../贵阳市影像/标注/2013"
-        # train_label_2013 = glob.glob(os.path.join(train_label_path_2013, "*.tif"))
-        #
-        # train_path_2013 = "../贵阳市影像/2013.03.06/贵阳市/Level18"
-        # train_2013 = [os.path.join(train_path_2013, os.path.basename(i)[6:]) for i in train_label_2013]
-        #
-        # train_label_path_2016 = "../贵阳市影像/标注/2016"
-        # train_label_2016 = glob.glob(os.path.join(train_label_path_2016, "*.tif"))
-        #
-        # train_path_2016 = "../贵阳市影像/2016.03.01/贵阳市/Level18"
-        # train_2016 = [os.path.join(train_path_2016, os.path.basename(i)[6:]) for i in train_label_2016]
-        #
-        # train_label_path_2008 = "../贵阳市影像/标注/2008"
-        # train_label_2008 = glob.glob(os.path.join(train_label_path_2008, "*.tif"))
-        #
-        # train_path_2008 = "../贵阳市影像/2008.03.26/贵阳市/Level18"
-        # train_2008 = [os.path.join(train_path_2008, os.path.basename(i)[6:]) for i in train_label_2008]
-        #
-        # train_path_wenchuan="../汶川数据集/tif"
-        # train_wenchuan= glob.glob(os.path.join(train_path_wenchuan,"*.tif"))
-        #
-        # train_label_path_wenchuan="../汶川数据集/labeltif"
-        # train_label_wenchuan=  glob.glob(os.path.join(train_label_path_wenchuan,"*.tif"))
-        #
-        # train_path_wenchuan_new="../汶川数据集/img_aug"
-        # train_wenchuan_new= glob.glob(os.path.join(train_path_wenchuan_new,"*.tif"))
-        #
-        # train_label_path_wenchuan_new="../汶川数据集/label_aug"
-        # train_label_wenchuan_new=  glob.glob(os.path.join(train_label_path_wenchuan_new,"*.tif"))
-        #
-        # train_path_djy = "../汶川数据集/djy/tifdjy"
-        #
-        # train_djy= glob.glob(os.path.join(train_path_djy,"*.tif"))
-        #
-        # train_label_path_djy = "../汶川数据集/djy/labeldjy"
-        #
-        # train_label_djy=glob.glob(os.path.join(train_label_path_djy , "*.tif"))
-        #
-        #
-        # train =  train_2013 + train_2016 + train_2008  + train_wenchuan + train_wenchuan_new+train_djy
-        # train_label = train_label_2013 +train_label_2016 + train_label_2008  + train_label_wenchuan + train_label_wenchuan_new+train_label_djy
-
+  
     train_path_hp='/workspace/DatasetWenchuan/DemComplate/e2e/train/'
     train_hp=glob.glob(os.path.join(train_path_hp,"*.tif"))
 
