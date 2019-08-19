@@ -25,7 +25,7 @@ In Mercalli scale. We conducted two training-testing runs in total. The first tr
 
 #### The Integrated SRTM Data at epicenter, Wenchuan 2018：
 ![](./resources/input.png)
-* SRRM data & Fault lines
+* SRTM data & Fault lines
 
 ![](./resources/label.png)
 * label data in the whole Wenchuan area.
@@ -44,13 +44,17 @@ We use two different way to generate prediction data.
 * Sliding window sample
 
 The first way like **monte carlo simulation** that random generate a cordinate of point in the whole area and add prediction to sample position on the background zero-matrix.(see iamge below)
+
 ![](./resources/Figure_2.png)
 
 
-The second way like convolution operation.The sample process like sliding window in original SRRM data map, you can set different stride to make result perfect.
+The second way like convolution operation.The sample process like sliding window in original STRM data map, you can set different stride to make result perfect.
 (see image below)
+
 ![](./resources/Figure_3.png)
 
+
+As comparison, the first way has more information about possibility of landslide,the secound way just faster and generate binary classification result to help people make a strategic decision directly.
 
 ****
 
@@ -75,10 +79,10 @@ Then
 source activate torchbeta
 python predict_vector_intensity.py #train_vector_intensity.py
 ```
-###Data:
+### Data:
 Original Data is 
-* SRTM map :[download link](http://dwtkns.com/srtm30m/)
-* Intensity map [download link](https://earthquake.usgs.gov/earthquakes/eventpage/usp000g650/shakemap/intensity)
+* SRTM map : [download link](http://dwtkns.com/srtm30m/)
+* Intensity map : [download link](https://earthquake.usgs.gov/earthquakes/eventpage/usp000g650/shakemap/intensity)
 * The Wenchuan Epicenter longitude and latitude (31.0°N,103.4°E)
 
 **Tips:**
