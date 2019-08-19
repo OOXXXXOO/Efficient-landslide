@@ -91,8 +91,6 @@ Preprocessed Data :
 [OneDrive Link ( China.Hongkong Data Center )](https://youngqfbr-my.sharepoint.com/:f:/g/personal/winshare_x1_tn/EjeEEp3l3qxDoJbHHVQjxDEBJpO4JwHzKjaYwoVAWHfw6Q?e=5Uez52)
 
 
-[]
-
 **Tips:**
 The $10^{6}$ small files I/O has been a bottleneck in training process，append all sample data to a npy file is a greate training strategy for save you time.
 
